@@ -1,4 +1,4 @@
-class Solution:
+1)class Solution:
     def firstPalindrome(self, words: List[str]) -> str:
         return next((word for word in words if(word)==word[::-1]),"")
         
@@ -8,3 +8,15 @@ class Solution:
          Output: "ada"
         Explanation: The first string that is palindromic is "ada".
          Note that "racecar" is also palindromic, but it is not the first.
+         
+         
+         
+         
+         
+      2)   class Solution:
+          def firstPalindrome(self, words: List[str]) -> str:
+          for  word in words:
+            if(word==word[::-1]):
+                return word
+          return ""
+        
