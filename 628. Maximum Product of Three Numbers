@@ -1,0 +1,21 @@
+    def maximumProduct(self, n: List[int]) -> int:
+        n.sort()
+        return(max(n[-1]*n[-2]*n[-3],n[0]*n[1]*n[-1]))
+
+
+
+
+Example 1:
+
+Input: nums = [1,2,3]
+Output: 6
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: 24
+Example 3:
+
+Input: nums = [-1,-2,-3]
+Output: -6
+
+        
