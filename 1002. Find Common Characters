@@ -1,0 +1,18 @@
+def commonChars(self, words: List[str]) -> List[str]:
+        c=words[0]
+        for i in range(1,len(words)):
+            c=list((Counter(c)&Counter(words[i])).elements())
+        return c
+        
+        
+        
+        
+        
+        example 1:
+
+Input: words = ["bella","label","roller"]
+Output: ["e","l","l"]
+Example 2:
+
+Input: words = ["cool","lock","cook"]
+Output: ["c","o"]
