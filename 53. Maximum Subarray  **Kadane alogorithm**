@@ -10,6 +10,18 @@
         
         
         
+ 2) def maxSubArray(self, n: List[int]) -> int:
+        t=n[0]
+        e=0
+        for i in n:
+            e=max(i,i+e)
+            if(t<e):
+                t=e
+        return t
+        
+        
+        
+        
         
  Example 1:
 
