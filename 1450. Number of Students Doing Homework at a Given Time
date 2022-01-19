@@ -1,0 +1,29 @@
+def busyStudent(self, s: List[int], e: List[int], q: int) -> int:
+        c=0
+        for i in range(len(e)):
+            if(e[i]==q):
+                c+=1
+            if(q in range(s[i],e[i])):
+                c+=1
+        return(c)
+        
+        
+        
+        
+        
+        
+        Example 1:
+
+Input: startTime = [1,2,3], endTime = [3,2,7], queryTime = 4
+Output: 1
+Explanation: We have 3 students where:
+The first student started doing homework at time 1 and finished at time 3 and wasn't doing anything at time 4.
+The second student started doing homework at time 2 and finished at time 2 and also wasn't doing anything at time 4.
+The third student started doing homework at time 3 and finished at time 7 and was the only student doing homework at time 4.
+Example 2:
+
+Input: startTime = [4], endTime = [4], queryTime = 4
+Output: 1
+Explanation: The only student was doing their homework at the queryTime.
+
+        
