@@ -1,0 +1,29 @@
+def uniqueMorseRepresentations(self, words: List[str]) -> int:
+        m = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.",
+                 "---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        return len(set([''.join([m[ord(c)-97] for c in w]) for w in words]))
+        
+        
+        
+        
+        
+        'a' maps to ".-",
+'b' maps to "-...",
+'c' maps to "-.-.", and so on.
+For convenience, the full table for the 26 letters of the English alphabet is given below:
+
+[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+Example 1:
+
+Input: words = ["gin","zen","gig","msg"]
+Output: 2
+Explanation: The transformation of each word is:
+"gin" -> "--...-."
+"zen" -> "--...-."
+"gig" -> "--...--."
+"msg" -> "--...--."
+There are 2 different transformations: "--...-." and "--...--.".
+Example 2:
+
+Input: words = ["a"]
+Output: 1
