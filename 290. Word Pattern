@@ -1,0 +1,31 @@
+ def wordPattern(self, p: str, s: str) -> bool:
+        w= s.split(' ')
+        d=dict()
+        if len(p) != len(w):
+            return(False)
+        if len(set(p)) != len(set(w)):
+            return(False) 
+        for i in range(len(w)):
+            if w[i] not in d:
+                d[w[i]] = p[i]
+            elif d[w[i]] != p[i]:
+                return(False)
+        return(True)
+        
+        
+        
+        
+        Example 1:
+
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true
+Example 2:
+
+Input: pattern = "abba", s = "dog cat cat fish"
+Output: false
+Example 3:
+
+Input: pattern = "aaaa", s = "dog cat cat dog"
+Output: false
+ 
+
