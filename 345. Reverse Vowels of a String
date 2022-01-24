@@ -1,0 +1,48 @@
+ def reverseVowels(self, s: str) -> str:
+        e=list(s)
+        b=["a","e","i","o","u","A","E","I","O","U"]
+        c=[]
+        d=[]
+        w=""
+        for i in range(len(e)):
+            for j in range(len(b)):
+                if(e[i]==b[j]):
+                    c.append(e[i])
+                    d.append(i)
+        p=c[::-1]
+        for i in range(len(d)):
+            e[d[i]]=p[i]
+        return(w.join(e))
+        
+        
+        
+        
+        s=list(s)
+        b=["a","e","i","o","u","A","E","I","O","U"]
+        c=[]
+        d=[]
+        w=""
+        for i in range(len(s)):
+            if s[i] in "aeiouAEIOU":
+                c.append(s[i])
+                d.append(i)
+        c=c[::-1]
+        for i in range(len(d)):
+            s[d[i]]=c[i]
+        return(w.join(s))
+        
+        
+        Given a string s, reverse only all the vowels in the string and return it.
+
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both cases.
+
+ 
+
+Example 1:
+
+Input: s = "hello"
+Output: "holle"
+Example 2:
+
+Input: s = "leetcode"
+Output: "leotcede"
