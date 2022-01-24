@@ -1,5 +1,10 @@
 s.reverse()
         return s
+     
+     
+     
+   s[:]=s[::-1]
+        return s
         
         
         
