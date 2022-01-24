@@ -1,0 +1,21 @@
+def detectCapitalUse(self, w: str) -> bool:
+        a=w[0]
+        b=w[1:]
+        if(w.isupper() or w.islower()):
+            return True
+        elif(a.isupper() and b.islower()):
+            return True
+        else:
+            return False
+            
+            
+            
+            
+   Example 1:
+
+Input: word = "USA"
+Output: true
+Example 2:
+
+Input: word = "FlaG"
+Output: false
