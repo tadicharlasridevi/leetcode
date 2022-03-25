@@ -1,0 +1,22 @@
+def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        if(max(letters)<=target):
+            return(min(letters))
+        for i in letters:
+            if(i>target):
+                return i
+                
+                
+   Example 1:
+
+Input: letters = ["c","f","j"], target = "a"
+Output: "c"
+Example 2:
+
+Input: letters = ["c","f","j"], target = "c"
+Output: "f"
+Example 3:
+
+Input: letters = ["c","f","j"], target = "d"
+Output: "f"
+
+        
