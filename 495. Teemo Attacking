@@ -1,0 +1,31 @@
+    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:
+        if(duration==0):
+            return 0
+        a=duration
+        for i in range(1,len(timeSeries)):
+            b=timeSeries[i]-timeSeries[i-1]
+            if(b+1<=duration):
+                a+=b
+            else:
+                a+=duration
+        return a
+        
+        
+        
+        
+        Example 1:
+
+Input: timeSeries = [1,4], duration = 2
+Output: 4
+Explanation: Teemo's attacks on Ashe go as follows:
+- At second 1, Teemo attacks, and Ashe is poisoned for seconds 1 and 2.
+- At second 4, Teemo attacks, and Ashe is poisoned for seconds 4 and 5.
+Ashe is poisoned for seconds 1, 2, 4, and 5, which is 4 seconds in total.
+Example 2:
+
+Input: timeSeries = [1,2], duration = 2
+Output: 3
+Explanation: Teemo's attacks on Ashe go as follows:
+- At second 1, Teemo attacks, and Ashe is poisoned for seconds 1 and 2.
+- At second 2 however, Teemo attacks again and resets the poison timer. Ashe is poisoned for seconds 2 and 3.
+Ashe is poisoned for seconds 1, 2, and 3, which is 3 seconds in total.
