@@ -1,0 +1,41 @@
+    def missingRolls(self, rolls: List[int], m: int, n: int) -> List[int]:
+        f=len(rolls)
+        sums=0
+        for i in range(f):
+            sums=sums+rolls[i]
+        c=n
+        p=0
+        w=[]
+        d=((f+n)*m-sums)
+        while(n!=0):
+            e=d//n
+            if(e<=6 and e>0):
+                w.append(e)
+                p=p+1
+                sums=sums+e
+            d=d-e
+            n=n-1
+        if((sums/(f+p))==m):
+            return w
+        else:
+            return []
+            
+            
+            
+            
+    Example 1:
+
+Input: rolls = [3,2,4,3], mean = 4, n = 2
+Output: [6,6]
+Explanation: The mean of all n + m rolls is (3 + 2 + 4 + 3 + 6 + 6) / 6 = 4.
+Example 2:
+
+Input: rolls = [1,5,6], mean = 3, n = 4
+Output: [2,3,2,2]
+Explanation: The mean of all n + m rolls is (1 + 5 + 6 + 2 + 3 + 2 + 2) / 7 = 3.
+Example 3:
+
+Input: rolls = [1,2,3,4], mean = 6, n = 4
+Output: []
+Explanation: It is impossible for the mean to be 6 no matter what the 4 missing rolls are.
+
