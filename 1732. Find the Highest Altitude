@@ -1,0 +1,5 @@
+ def largestAltitude(self, g: List[int]) -> int:
+        l=[0]
+        for i in range(len(g)):
+            l.append(g[i]+l[i])
+        return max(l)
